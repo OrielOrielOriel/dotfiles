@@ -1,0 +1,27 @@
+ ---
+template:
+  direction: Horizontal
+  parts:
+    - direction: Vertical # Tab bar at top
+      borderless: true
+      split_size: 
+        Fixed: 1
+      run:
+        plugin:
+          location: "zellij:tab-bar"
+    - direction: Vertical # Main body
+      body: true
+    - direction: Vartical # Status bar thingy
+      borderless: true
+      split_size:
+        Fixed: 2
+      run:
+        plugin:
+          location: "zellij:status-bar"
+tabs:
+  - name: "Terminal"
+  - name: "nvim #1"
+    direction: Horizontal
+    parts:
+      - direction: Vertical
+      - direction: Vertical

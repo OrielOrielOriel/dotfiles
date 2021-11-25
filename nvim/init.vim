@@ -7,10 +7,9 @@ Plug 'https://github.com/whatyouhide/vim-gotham'
 Plug 'https://github.com/cseelus/vim-colors-lucid'
 Plug 'https://github.com/NLKNguyen/papercolor-theme'
 
-" UI Elements {{{
+" UI Elements
 Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdtree'
-" }}} UI Elements
 
 " LSP
 Plug 'https://github.com/neovim/nvim-lspconfig' 
@@ -20,7 +19,7 @@ call plug#end()
 
 " Color Scheme Settings {{{
 set termguicolors
-colorscheme gotham
+colorscheme iceberg
 " }}} Color Scheme Settings
 
 " Spaces & Tabs {{{
@@ -30,6 +29,10 @@ set shiftwidth=4    " number of spaces to use for autoindent
 set expandtab       " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
+
+" Autochange indent for .yaml files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " }}} Spaces & Tabs
 
 " UI Config {{{
